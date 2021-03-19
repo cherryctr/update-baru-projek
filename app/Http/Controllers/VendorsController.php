@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Vendors;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use App\Models\Kategoris;
 
 class VendorsController extends Controller
 {
@@ -15,6 +17,9 @@ class VendorsController extends Controller
     public function index()
     {
         //
+        $vendors = DB::table('vendors')->paginate(9);
+        $kategoris = Kategoris::All();
+        return view('layouts.vendors.index',compact('kategoris','vendors',['vendors'=> $vendors]));
     }
 
     /**

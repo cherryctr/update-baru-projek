@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\VendorsController;
 
 
 /*
@@ -25,4 +26,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/testinghome', [HomeController::class,'index']);
+Route::get('/vendors', [VendorsController::class,'index']);
 Route::view('/home','home')->middleware('auth');

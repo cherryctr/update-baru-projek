@@ -12,7 +12,7 @@
               </div>
             </div>
             <div class="d-flex justify-content-center">
-              <a href="{{ url('/list-vendor-sekitar') }}" class="text-regular text-secondary mx-3">Vendor disekitarmu</a>
+              <a href="{{ url('/vendors') }}" class="text-regular text-secondary mx-3">Vendor disekitarmu</a>
               <a href="{{ url('/list-jasa-sekitar') }}" class="text-regular text-secondary mx-3">Jasa disekitarmu</a>
               <a href="" class="text-regular text-secondary mx-3">Jasa yang paling dicari</a>
               <a href="" class="text-regular text-secondary mx-3">Jasa terbaik</a>
