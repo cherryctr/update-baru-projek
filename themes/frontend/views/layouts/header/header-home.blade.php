@@ -2,10 +2,12 @@
         <div class="container">
           <div class="desktop">
             <div class="d-flex align-items-center justify-content-between mb-5">
+              
               <div class="d-flex align-items-center">
                 <img class="mr-5" src="{{ asset('themes/frontend/images/logo.png') }}" alt="">
                 <img src="{{ asset('themes/frontend/images/category-point.png') }}" alt="">
               </div>
+
               <div class="d-flex">
                 <button class="btn-login mr-3">Masuk</button>
                 <button class="btn-regis">Daftar</button>

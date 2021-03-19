@@ -31,5 +31,15 @@
     <script src="{{ asset('themes/frontend/js/slick.min.js') }}"></script>
     <script src="{{ asset('themes/frontend/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('themes/frontend/js/app.js') }}"></script>
+    
+        <script type="text/javascript">
+            $(function () {
+                $("#toggle_pwd").click(function () {
+                    $(this).toggleClass("fa-eye fa-eye-slash");
+                   var type = $(this).hasClass("fa-eye-slash") ? "text" : "password";
+                    $("#password").attr("type", type);
+                });
+            });
+    </script>
   </body>
 </html>
