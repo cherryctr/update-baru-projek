@@ -271,7 +271,7 @@
             <div class="col-md-6 col-12 mb-5">
               <div class="d-flex">
                 <div class="profile big">
-                  <img src="{{ asset('theme/frontend/images/ex-profile-1.jpg') }}" alt="">
+                  <img src="{{ asset('themes/frontend/images/ex-profile-1.jpg') }}" alt="">
                 </div>
                 <div class="d-flex flex-column ml-3">
                   <h4 class="testi-text mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo condimentum fermentum tortor ut hendrerit sodales massa. Quam sed vestibulum quam commodo vel urna. At vitae amet interdum semper eu nibh enim sit. </h4>
@@ -290,10 +290,10 @@
           </div>
           <div class="row">
             <div class="col-sm-7 mb-4">
-              <img src="{{ asset('theme/frontend/images/gallery-1.png') }}" class="img-fluid w-100 h-100" alt="">
+              <img src="{{ asset('themes/frontend/images/gallery-1.png') }}" class="img-fluid w-100 h-100" alt="">
             </div>
             <div class="col-sm-5 mb-4">
-              <img src="{{ asset('theme/frontend/images/gallery-2.png') }}" class="img-fluid w-100 h-100" alt="">
+              <img src="{{ asset('themes/frontend/images/gallery-2.png') }}" class="img-fluid w-100 h-100" alt="">
             </div>  
           </div>
          
