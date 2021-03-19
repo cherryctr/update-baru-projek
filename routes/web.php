@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\VendorsController;
+use App\Http\Controllers\JasasController;
 
 
 /*
@@ -22,9 +23,15 @@ Route::get('/', function () {
 });
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// HOME ROUTE
 Route::get('/testinghome', [HomeController::class,'index']);
+
+// VENDOR ROUTE
 Route::get('/vendors', [VendorsController::class,'index']);
+
+
+
+// JASA ROUTE
+Route::get('/jasa-list', [JasasController::class,'index']);
+
 Route::view('/home','home')->middleware('auth');

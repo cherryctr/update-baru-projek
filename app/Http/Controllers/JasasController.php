@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Jasas;
 use Illuminate\Http\Request;
+use App\Models\Kategoris;
+use Illuminate\Support\Facades\DB;
 
 class JasasController extends Controller
 {
@@ -15,6 +17,9 @@ class JasasController extends Controller
     public function index()
     {
         //
+        $kategoris = Kategoris::All();
+        $jasas = DB::table('jasas')->paginate(9);
+        return view('layouts.jasa.index-jasa',compact('kategoris','jasas',['jasas'=> $jasas]));
     }
 
     /**
