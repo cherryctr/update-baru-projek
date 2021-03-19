@@ -126,11 +126,8 @@
                 </div>
               </div>
             </div>
-            
-          </div>
 
-           <div class="row">
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+             <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
               <div class="card noborder">
                 <img src="{{ asset('themes/frontend/images/jasa-1.jpg') }}" class="card-img-top" alt="...">
                 <div class="card-body no-paddingleft">
@@ -147,11 +144,8 @@
                 </div>
               </div>
             </div>
-            
-          </div>
 
-           <div class="row">
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+             <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
               <div class="card noborder">
                 <img src="{{ asset('themes/frontend/images/jasa-1.jpg') }}" class="card-img-top" alt="...">
                 <div class="card-body no-paddingleft">
@@ -168,11 +162,8 @@
                 </div>
               </div>
             </div>
-            
-          </div>
 
-           <div class="row">
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+             <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
               <div class="card noborder">
                 <img src="{{ asset('themes/frontend/images/jasa-1.jpg') }}" class="card-img-top" alt="...">
                 <div class="card-body no-paddingleft">
@@ -188,9 +179,10 @@
                   <h2 class="text-primary text-ptserif">Rp 1500.000</h2>
                 </div>
               </div>
-            </div>
-            
+            </div>            
           </div>
+
+           
         </div>
         <div class="mb-5">
           <h2 class="text-ptserif mb-2">Jasa top bulan ini</h2>
