@@ -171,17 +171,19 @@
             @endforeach
               
             </div>
-            
+            <!-- PENEMPATAN PAGINATION -->
+            {{ $vendors->links('layouts.pagination.pagination') }}
+            <!-- END -->
             @else
             <div class="alert alert-primary" role="alert">
               DATA KOSONG, HUBUNGI ADMIN....!!!
             </div>
             @endif
-           <!-- PENEMPATAN PAGINATION -->
+           
 
-             {{ $vendors->links('layouts.pagination.pagination') }}
+             
 
-           <!-- END -->
+          
           </div>
         </div>
       </div>
