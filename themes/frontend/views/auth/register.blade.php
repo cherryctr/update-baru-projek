@@ -7,7 +7,7 @@
           <div class="d-flex align-items-center mb-sm-0 mb-2">
             <img src="{{ asset('themes/frontend/images/logo.png') }}" alt="">
           </div>
-          <h1 class="h5 font-regular mr-3 pointer">Sudah punya akun? <a href="login.html" class="color-primary font-regular ml-2 pointer">Masuk</a></h1>
+          <h1 class="h5 font-regular mr-3 pointer">Sudah punya akun? <a href="{{ route('login') }}" class="color-primary font-regular ml-2 pointer">Masuk</a></h1>
         </div>
       </div>
     </header>

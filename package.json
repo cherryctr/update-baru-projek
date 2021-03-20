@@ -11,8 +11,7 @@
     },
     "devDependencies": {
         "axios": "^0.21",
-<<<<<<< HEAD
-<<<<<<< HEAD
+
         "bootstrap": "^4.6.0",
         "jquery": "^3.5",
         "laravel-mix": "^6.0.6",
@@ -21,16 +20,15 @@
         "postcss": "^8.1.14",
         "resolve-url-loader": "^3.1.2",
         "sass": "^1.32.1",
-        "sass-loader": "^10.1.1"
-=======
+        "sass-loader": "^10.1.1",
+
+        "laravel-mix": "^6.0.6",
+        "lodash": "^4.17.19",
+        "postcss": "^8.1.14",
+
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14"
->>>>>>> 15dc74ce489af3c27bd82a483ae3c00b8e79ccbb
-=======
-        "laravel-mix": "^6.0.6",
-        "lodash": "^4.17.19",
-        "postcss": "^8.1.14"
->>>>>>> 15dc74ce489af3c27bd82a483ae3c00b8e79ccbb
+
     }
 }

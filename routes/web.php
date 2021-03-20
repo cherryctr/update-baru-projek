@@ -35,3 +35,11 @@ Route::get('/vendors', [VendorsController::class,'index']);
 Route::get('/jasa-list', [JasasController::class,'index']);
 
 Route::view('/home','home')->middleware('auth');
+
+Route::prefix('user')->group(function () {
+	Route::group(['middleware' => 'auth'], function() {
+		Route::get('/dashboardadmin', 'Admin\DashboardController@index')->name('admin.dashboard.index');
+
+		
+   });
+});

@@ -8,7 +8,7 @@
           <div class="d-flex align-items-center mb-sm-0 mb-2">
             <img src="{{ asset('themes/frontend/images/logo.png') }}" alt="">
           </div>
-          <h1 class="h5 font-regular mr-3 pointer">Belum punya akun? <a href="register.html" class="color-primary font-regular ml-2 pointer">Daftar disini</a></h1>
+          <h1 class="h5 font-regular mr-3 pointer">Belum punya akun? <a href="{{ route('register') }}" class="color-primary font-regular ml-2 pointer">Daftar disini</a></h1>
         </div>
       </div>
 </header>
@@ -69,7 +69,10 @@
               </div>
             </div>
             <a class="btn btn-outline-dark w-100 py-2 mb-4"><img class="mr-4 icon-google" src="{{ asset('themes/frontend/images/icon-google.svg') }}"> Sign in with Google</a> 
-            <a href="index.html" class="btn btn-booking py-2">Masuk</a>
+            <button type="submit" class="btn btn-booking py-2">
+                                    {{ __('Login') }}
+            </button>
+           
           </form>
         </div>
       </div>

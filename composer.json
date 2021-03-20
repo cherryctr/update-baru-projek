@@ -12,20 +12,16 @@
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
-<<<<<<< HEAD
-<<<<<<< HEAD
+
         "laravel/fortify": "^1.7",
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
-        "qirolab/laravel-themer": "^1.4"
-=======
+        "qirolab/laravel-themer": "^1.4",
+        "laravel/framework": "^8.12",
+        "laravel/tinker": "^2.5",
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5"
->>>>>>> 15dc74ce489af3c27bd82a483ae3c00b8e79ccbb
-=======
-        "laravel/framework": "^8.12",
-        "laravel/tinker": "^2.5"
->>>>>>> 15dc74ce489af3c27bd82a483ae3c00b8e79ccbb
+
     },
     "require-dev": {
         "facade/ignition": "^2.5",
