@@ -18,7 +18,7 @@
         <div class="col-md-7 mx-auto">
           <h1 class="text-secondary text-center text-ptserif mb-2">Halo, selamat datang !</h1>
           <h2 class="h3 font-regular text-center text-secondary mb-5">Silahkan masuk ke akun alapesta kamu untuk mengexplore jasa dari kami</h2>
-          <form action="{{ route('login') }}">
+          <form action="{{ route('login') }}" method="POST">
             @csrf
             <div class="form-group">
               <label for="email">{{ __('E-Mail Address') }}</label>

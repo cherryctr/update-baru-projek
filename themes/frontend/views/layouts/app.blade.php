@@ -41,5 +41,15 @@
                 });
             });
     </script>
+
+     <script type="text/javascript">
+            $(function () {
+                $("#toggle_pwd1").click(function () {
+                    $(this).toggleClass("fa-eye fa-eye-slash");
+                   var type = $(this).hasClass("fa-eye-slash") ? "text" : "password";
+                    $("#password-confirm").attr("type", type);
+                });
+            });
+    </script>
   </body>
 </html>

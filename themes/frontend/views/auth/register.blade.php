@@ -17,10 +17,18 @@
         <div class="col-md-7 mx-auto">
           <h1 class="text-secondary text-center text-ptserif mb-2">Halo, selamat datang kembali!</h1>
           <h2 class="h3 font-regular text-center text-secondary mb-5">Daftarkan dirimu sekarang untuk mendapatkan penawaran exclusive</h2>
-          <form>
+          <form action="{{ route('register') }}">
+            @csrf
             <div class="form-group">
               <label for="name">Nama Pengguna</label>
-              <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
+             <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+
+              @error('name')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+              @enderror
+
             </div>
             <div class="form-group">
               <label for="notel">Nomor Handphone</label>
@@ -28,11 +36,49 @@
             </div>
             <div class="form-group">
               <label for="email">Alamat Email</label>
-              <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+              <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+
+              @error('email')
+                  <span class="invalid-feedback" role="alert">
+                      <strong>{{ $message }}</strong>
+                  </span>
+              @enderror
             </div>
             <div class="form-group">
-              <label for="password">Password</label>
-              <input type="password" class="form-control" id="password">
+
+              <label for="password">{{ __('Password') }}</label>
+             <!--  <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+              <span id="toggle_pwd" class="fa fa-fw fa-eye field_icon"></span> --> 
+                <div class="input-group">
+                    <input class="form-control py-2 border-right-0 border @error('password') is-invalid @enderror" type="password" id="password" required autocomplete="current-password">
+                    <span class="input-group-append">
+                        <div class="input-group-text bg-transparent"><i id="toggle_pwd" class="fa fa-eye" style="cursor: pointer;"></i></div>
+                    </span>
+                </div>
+                @error('password')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
+            </div>
+
+            <div class="form-group">
+
+              <label for="password">{{ __('Confirm Password') }}</label>
+             <!--  <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+              <span id="toggle_pwd" class="fa fa-fw fa-eye field_icon"></span> --> 
+                <div class="input-group">
+
+                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                    <span class="input-group-append">
+                        <div class="input-group-text bg-transparent"><i id="toggle_pwd1" class="fa fa-eye" style="cursor: pointer;"></i></div>
+                    </span>
+                </div>
+                @error('password')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
             </div>
             <div class="p-4">
               <div class="login-or">
