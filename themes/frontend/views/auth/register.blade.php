@@ -17,7 +17,7 @@
         <div class="col-md-7 mx-auto">
           <h1 class="text-secondary text-center text-ptserif mb-2">Halo, selamat datang kembali!</h1>
           <h2 class="h3 font-regular text-center text-secondary mb-5">Daftarkan dirimu sekarang untuk mendapatkan penawaran exclusive</h2>
-          <form action="{{ route('register') }}">
+          <form action="{{ route('register') }}" method="POST">
             @csrf
             <div class="form-group">
               <label for="name">Nama Pengguna</label>
@@ -86,7 +86,11 @@
               </div>
             </div>
             <a class="btn btn-outline-dark w-100 py-2 mb-4"><img class="mr-4 icon-google" src="{{ asset('themes/frontend/images/icon-google.svg') }}"> Sign in with Google</a> 
-            <a href="login.html" class="btn btn-booking py-2">Daftar</a>
+
+            <button type="submit" class="btn btn-booking py-2">
+                                    {{ __('Register') }}
+            </button>
+          
           </form>
         </div>
       </div>

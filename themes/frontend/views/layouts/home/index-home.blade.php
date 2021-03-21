@@ -34,7 +34,10 @@
       <div class="container">
         <div class="mb-5">
           <h2 class="text-ptserif mb-2">Kategori</h2>
-          <h5 class="font-light mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h5>
+         <div class="d-flex justify-content-between mb-3">
+            <h5 class="font-light"></h5>
+            <a href="" class="h5 font-regular color-primary text-bold link">lihat semua</a>
+          </div>
           <div class="row">
             @foreach( $kategoris as $kategori )
             <div class="col-xl-2 col-md-3 col-sm-4 col-6 mb-2">

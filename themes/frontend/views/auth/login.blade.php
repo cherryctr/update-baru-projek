@@ -37,7 +37,7 @@
              <!--  <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
               <span id="toggle_pwd" class="fa fa-fw fa-eye field_icon"></span> --> 
                 <div class="input-group">
-                    <input class="form-control py-2 border-right-0 border @error('password') is-invalid @enderror" type="password" id="password" required autocomplete="current-password">
+                    <input class="form-control py-2 border-right-0 border @error('password') is-invalid @enderror" name="password" type="password" id="password" required autocomplete="current-password">
                     <span class="input-group-append">
                         <div class="input-group-text bg-transparent"><i id="toggle_pwd" class="fa fa-eye" style="cursor: pointer;"></i></div>
                     </span>
@@ -56,6 +56,7 @@
                 <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                 <label class="form-check-label" for="exampleCheck1">{{ __('Remember Me') }}</label>
               </div>
+
                 @if (Route::has('password.request'))
                     <a class="color-danger pointer" href="{{ route('password.request') }}">
                         {{ __('Forgot Your Password?') }}
