@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Vendors;
+use App\Models\Jasas;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\Kategoris;
@@ -49,9 +50,15 @@ class VendorsController extends Controller
      * @param  \App\Models\Vendors  $vendors
      * @return \Illuminate\Http\Response
      */
-    public function show(Vendors $vendors)
+    public function show($id)
     {
         //
+         $vendors = Vendors::findOrFail($id)->join('jasas','vendors.id' , "=" ,"jasas.vendor_id")->get();
+        //  $vendors = Product::latest($id)->when(request()->q, function($products) {
+        //     $vendors = $vendors->where('title', 'like', '%'. request()->q . '%');
+        // });
+         // return $vendors;exit;
+         return view('layouts.vendors.detail-vendor',compact('vendors'));
     }
 
     /**
@@ -87,4 +94,6 @@ class VendorsController extends Controller
     {
         //
     }
+
+
 }

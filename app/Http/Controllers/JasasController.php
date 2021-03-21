@@ -49,9 +49,12 @@ class JasasController extends Controller
      * @param  \App\Models\Jasas  $jasas
      * @return \Illuminate\Http\Response
      */
-    public function show(Jasas $jasas)
+    public function show($id)
     {
         //
+        // $jasas = Jasas::findOrFail($id);
+        
+
     }
 
     /**

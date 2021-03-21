@@ -28,6 +28,7 @@ Route::get('/testinghome', [HomeController::class,'index']);
 
 // VENDOR ROUTE
 Route::get('/vendors', [VendorsController::class,'index']);
+Route::get('vendors/detail/{id}',[VendorsController::class,'show'])->name('vendors.detail-jasa');
 
 
 

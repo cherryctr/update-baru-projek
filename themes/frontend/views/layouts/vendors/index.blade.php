@@ -153,7 +153,7 @@
                 <div class="card noborder">
                  <img src="https://via.placeholder.com/100x100" class="card-img-top" alt="{{ $vendor->nama_vendor }}">
                   <div class="card-body no-paddingleft">
-                    <h4 class="mb-2">{{ $vendor->nama_vendor }}</h4>
+                    <a href="{{ url('/vendors/detail/'.$vendor->id) }}"><h4 class="mb-2">{{ $vendor->nama_vendor }}</h4></a>
                     <p class="mb-2 font-light">{{ $vendor->alamat_lengkap  }}</p>
                     <div class="d-flex mb-2">
                     <img class="mr-2" src="{{ asset('themes/frontend/images/star-full.png') }}" alt="">
