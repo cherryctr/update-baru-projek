@@ -6,6 +6,7 @@ use App\Models\Jasas;
 use Illuminate\Http\Request;
 use App\Models\Kategoris;
 use Illuminate\Support\Facades\DB;
+use App\Models\Ratings_Place;
 
 class JasasController extends Controller
 {
@@ -18,8 +19,9 @@ class JasasController extends Controller
     {
         //
         $kategoris = Kategoris::All();
+        $rating_place = Ratings_Place::All();
         $jasas = DB::table('jasas')->paginate(9);
-        return view('layouts.jasa.index-jasa',compact('kategoris','jasas',['jasas'=> $jasas]));
+        return view('layouts.jasa.index-jasa',compact('kategoris','rating_place','jasas',['jasas'=> $jasas]));
     }
 
     /**
