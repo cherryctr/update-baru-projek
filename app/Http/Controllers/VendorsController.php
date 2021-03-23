@@ -7,6 +7,7 @@ use App\Models\Jasas;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\Kategoris;
+use App\Models\Ratings_Place;
 
 class VendorsController extends Controller
 {
@@ -19,8 +20,9 @@ class VendorsController extends Controller
     {
         //
         $vendors = DB::table('vendors')->paginate(9);
+        $rating_place = Ratings_Place::All();
         $kategoris = Kategoris::All();
-        return view('layouts.vendors.index',compact('kategoris','vendors',['vendors'=> $vendors]));
+        return view('layouts.vendors.index',compact('kategoris','rating_place','vendors',['vendors'=> $vendors]));
     }
 
     /**
@@ -53,7 +55,7 @@ class VendorsController extends Controller
     public function show($id)
     {
         //
-         $vendors = Vendors::findOrFail($id)->join('jasas','vendors.id' , "=" ,"jasas.vendor_id")->get();
+         $vendors = Vendors::findOrFail($id);
         //  $vendors = Product::latest($id)->when(request()->q, function($products) {
         //     $vendors = $vendors->where('title', 'like', '%'. request()->q . '%');
         // });

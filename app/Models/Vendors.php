@@ -13,6 +13,22 @@ class Vendors extends Model
     // 
 
     protected $primaryKey = 'id';
+ 	protected $table = 'vendors';
+    protected $fillable = [
+        'id',
+        'user_id',
+        'photo_vendor',
+        'nama_vendor',
+        'kontak',
+        'email',
+        'provinsi_id',
+        'kabupaten_id',
+        'kecamatan_id',
+        'kelurahan_id',
+        'status',
+        'alamat_lengkap',
+        'ktp',
+    ];
 
     public function jasas()
 	{

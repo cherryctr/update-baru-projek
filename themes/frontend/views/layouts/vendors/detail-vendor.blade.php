@@ -6,31 +6,31 @@
     @include('layouts.header.header-home')
   <!-- END INCLUDE HEADER -->
 
-  @foreach($vendors as $vendor)
+
     <div class="container">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="#">Homepage</a></li>
           <li class="breadcrumb-item"><a href="#">List vendor</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Detail {{ $vendor->nama_vendor }}</li>
+          <li class="breadcrumb-item active" aria-current="page">Detail {{ $vendors->nama_vendor }}</li>
         </ol>
       </nav>
       <div class="banner mb-4">
         <img src="https://via.placeholder.com/1101x450" alt="">
       </div>
-      <h4 class="font-regular mb-4">“ {{ $vendor->deskripsi }} </h4>
+      <h4 class="font-regular mb-4">“ {{ $vendors->deskripsi }} </h4>
       <div class="row">
         <div class="col-sm-7">
           <div class="card-detail mb-5">
             <div class="d-flex justify-content-between mb-4">
               <div class="d-flex flex-column align-items-md-baseline align-items-center">
                 <img src="{{ asset('themes/frontend/images/icon-diskon.png') }}" alt="">
-                <h2 class="text-primary font-bold mt-2">{{ $vendor->jumlah_dp }}%</h2>
+                <h2 class="text-primary font-bold mt-2">{{ $vendors->jumlah_dp }}%</h2>
                 <h5 class="text-ptserif text-secondary mt-2">DP</h5>
               </div>
               <div class="d-flex flex-column align-items-md-baseline align-items-center">
                 <img src="{{ asset('themes/frontend/images/icon-lihat.png') }}" alt="">
-                <h2 class="text-primary font-bold mt-2">{{ $vendor->dilihat }}</h2>
+                <h2 class="text-primary font-bold mt-2">{{ $vendors->dilihat }}</h2>
                 <h5 class="text-ptserif text-secondary mt-2">Dilihat pengguna</h5>
               </div>
               <div class="d-flex flex-column align-items-md-baseline align-items-center">
@@ -41,7 +41,7 @@
             </div>
             <h4 class="font-light mb-3">Harga Jasa</h4>
             <div class="d-flex align-items-center mb-2">
-              <h1 class="color-primary">Rp. {{ number_format($vendor->harga,2) }}</h1>
+              <h1 class="color-primary">Rp. {{ number_format($vendors->harga,2) }}</h1>
               <h3 class="text-regular text-secondary">/ hari</h3>
             </div>
             <p class="mb-4">*Harga bisa berubah sesuai dengan jarak acara, tanya vendor untuk memastikan harga jasa yang harus dibayar</p>
@@ -54,8 +54,8 @@
             <div class="profile square mb-3 mt-3">
               <img src="{{ asset('themes/frontend/images/ex-profile-3.jpg') }}" alt="">
             </div>
-            <h4 class="text-ptserif text-center mb-2">{{ $vendor->nama_vendor }}</h4>
-            <h5 class="text-secondary mb-4">{{ $vendor->alamat_lengkap }}</h5>
+            <h4 class="text-ptserif text-center mb-2">{{ $vendors->nama_vendor }}</h4>
+            <h5 class="text-secondary mb-4">{{ $vendors->alamat_lengkap }}</h5>
             <div class="d-flex align-items-center mb-5">
               <img src="{{ asset('images/icon-verified.png') }}" alt="">
               <p class="text-success font-semibold ml-2">Verified Account</p>
@@ -283,7 +283,7 @@
         </div>
       </div>
     </div>
-  @endforeach
+
     <!-- Modal Nego -->
     <div class="modal fade" id="modalNego" tabindex="-1" aria-labelledby="modalNegoLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -362,4 +362,3 @@
       </div>
     </div>
 
-  @endsection
