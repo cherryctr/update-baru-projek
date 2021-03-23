@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\Kategoris;
 use App\Models\Ratings_Place;
+use Laravolt\Indonesia\Models\Province;
+use Laravolt\Indonesia\Models\City;
+
 
 class VendorsController extends Controller
 {
@@ -22,8 +25,13 @@ class VendorsController extends Controller
         $vendors = DB::table('vendors')->paginate(9);
         $rating_place = Ratings_Place::All();
         $kategoris = Kategoris::All();
-        return view('layouts.vendors.index',compact('kategoris','rating_place','vendors',['vendors'=> $vendors]));
-    }
+        $provinces = Province::pluck('name', 'id');
+        // $cities = City::where('province_id', $request->get('id'))
+        // return response()->json($cities);
+        return view('layouts.vendors.index',compact('kategoris','rating_place','vendors',['vendors'=> $vendors]),[
+            'provinces' => $provinces,
+        ]);
+    }   
 
     /**
      * Show the form for creating a new resource.
@@ -43,7 +51,10 @@ class VendorsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $cities = City::where('province_id', $request->get('id'))
+            ->pluck('name', 'id');
+    
+        return response()->json($cities);
     }
 
     /**

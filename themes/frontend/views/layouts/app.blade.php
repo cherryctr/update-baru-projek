@@ -51,5 +51,21 @@
                 });
             });
     </script>
+
+   <script type="text/javascript">
+      $(function () {
+            $('#province').on('change', function () {
+                axios.post('{{ route('vendor.store') }}', {id: $(this).val()})
+                    .then(function (response) {
+                        $('#city').empty();
+                        
+                        $.each(response.data, function (id, name) {
+                            $('#city').append(new Option(name, id))
+                        })
+                    });
+            });
+        });
+
+   </script>
   </body>
 </html>

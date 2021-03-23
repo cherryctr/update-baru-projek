@@ -20,7 +20,7 @@
             @include('layouts.bar-right.kategori')
             
             <!-- INCLUDE LAYUOUT WILAYAH -->
-            @include('layouts.bar-right.daerah')
+            @include('layouts.bar-right.daerah-select-option')
 
             <!-- INCLUDE LAYOUT RATINGS BAR -->
             @include('layouts.bar-right.ratings')
