@@ -14,7 +14,7 @@
 
                   <div class="form-group">
                     <label for="exampleFormControlSelect1">Pilih Kota</label>
-                    <select class="form-control" id="city">
+                    <select name="city" class="form-control" id="city">
                      <option>-- PILIH --</option>
                     
                     </select>

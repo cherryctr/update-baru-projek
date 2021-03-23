@@ -27,10 +27,12 @@
    
 
     <script src="{{ asset('themes/frontend/js/jquery-3.5.1.slim.min.js') }}"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
     <script src="{{ asset('themes/frontend/js/popper.min.js') }}"></script>
     <script src="{{ asset('themes/frontend/js/slick.min.js') }}"></script>
     <script src="{{ asset('themes/frontend/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('themes/frontend/js/app.js') }}"></script>
+    <script src="{{ asset('themes/frontend/js/app.js') }}" defer></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     
         <script type="text/javascript">
             $(function () {
@@ -40,9 +42,9 @@
                     $("#password").attr("type", type);
                 });
             });
-    </script>
+        </script>
 
-     <script type="text/javascript">
+    <script type="text/javascript">
             $(function () {
                 $("#toggle_pwd1").click(function () {
                     $(this).toggleClass("fa-eye fa-eye-slash");
@@ -52,19 +54,29 @@
             });
     </script>
 
-   <script type="text/javascript">
-      $(function () {
-            $('#province').on('change', function () {
-                axios.post('{{ route('vendor.store') }}', {id: $(this).val()})
-                    .then(function (response) {
+   <script>
+    window.addEventListener('DOMContentLoaded', function() {
+       $(function () {
+            $.ajaxSetup({
+                headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') }
+            });
+
+            $('#province').change(function () {
+                $.ajax({
+                    url: '{{ route('vendorsprovice.store') }}',
+                    method: 'POST',
+                    data: {id: $(this).val()},
+                    success: function (response) {
                         $('#city').empty();
-                        
-                        $.each(response.data, function (id, name) {
+
+                        $.each(response, function (id, name) {
                             $('#city').append(new Option(name, id))
                         })
-                    });
+                    }
+                })
             });
         });
+    });
 
    </script>
   </body>
